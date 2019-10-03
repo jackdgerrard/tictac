@@ -10,7 +10,6 @@ export class BoardComponent implements OnInit {
   tiles: any[];
   oIsNext: boolean;
   winner: string;
-  turnCount:number;
 
   ngOnInit() {
     this.newGame();
@@ -20,7 +19,6 @@ export class BoardComponent implements OnInit {
     this.tiles = Array(9).fill(null);
     this.winner = null;
     this.oIsNext = false;
-    this.turnCount = 0;
   }
 
   get player() {
@@ -28,10 +26,9 @@ export class BoardComponent implements OnInit {
   }
 
   makeMove(idx: number) {
-    if (!this.tiles[idx] && this.turnCount < 9) {
+    if (!this.tiles[idx] && !this.winner) {
       this.tiles.splice(idx, 1, this.player);
       this.oIsNext = !this.oIsNext;
-      this.turnCount ++;
     }
 
     this.winner = this.calculateWinner();
