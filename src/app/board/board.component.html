@@ -7,12 +7,10 @@
 </h3>
 
 <main>
-    <app-square 
+    <app-square
         *ngFor = "let val of tiles; let i = index" 
         [value] = "val"
         (click) = "makeMove(i)">
     </app-square>
 </main>
-
-
 <p>Thanks to <a href="https://www.youtube.com/watch?v=G0bBLvWXBvc&t=314s" alt ="FireShip">Jeff Delaney at Fire Ship </a>For the super straight-forward Angular tutorial</p>
