@@ -1,0 +1,18 @@
+<h2>Current Player: {{player}}</h2>
+
+<button id="start-button" nbButton (click)="newGame()"> New Game </button>
+<br>
+<h3 *ngIf="winner">
+    Player {{ winner }} has won the game!
+</h3>
+
+<main>
+    <app-square 
+        *ngFor = "let val of tiles; let i = index" 
+        [value] = "val"
+        (click) = "makeMove(i)">
+    </app-square>
+</main>
+
+
+<p>Thanks to <a href="https://www.youtube.com/watch?v=G0bBLvWXBvc&t=314s" alt ="FireShip">Jeff Delaney at Fire Ship </a>For the super straight-forward Angular tutorial</p>

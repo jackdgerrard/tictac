@@ -1,0 +1,13 @@
+main {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10vh / 10vw;
+    width:90vw;
+    height: 60vh;
+    margin:0;padding:0; box-sizing: border-box;
+}
+
+app-square, #start-button{
+    border: 1px solid #ccc;
+    height: 33%;
+}
