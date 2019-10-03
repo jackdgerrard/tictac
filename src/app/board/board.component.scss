@@ -1,13 +1,20 @@
 main {
     display: grid; 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10vh / 10vw;
     width:90vw;
-    height: 60vh;
-    margin:0;padding:0; box-sizing: border-box;
+    height:90vw;
 }
 
-app-square, #start-button{
+app-square{
     border: 1px solid #ccc;
-    height: 33%;
+    height: 25vw;
+    width: 25vw;
 }
+
+button{
+    width: 100%;
+    margin:0;padding:0;
+    font-weight: 700;
+
+}
+
